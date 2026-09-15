@@ -1,5 +1,5 @@
 /* =========================================================
-   DRIVELUX
+   Jbn-Car 
    Interactive Car Rental Website
    ========================================================= */
 
@@ -105,7 +105,7 @@ const cars = [
 /* ================= VARIABLES ================= */
 
 let selectedCategory = "all";
-let favorites = JSON.parse(localStorage.getItem("driveluxFavorites")) || [];
+let favorites = JSON.parse(localStorage.getItem("Jbn-Car Favorites")) || [];
 let selectedCar = null;
 
 const carsGrid = document.getElementById("carsGrid");
@@ -406,7 +406,7 @@ function toggleFavorite(id) {
     }
 
     localStorage.setItem(
-        "driveluxFavorites",
+        "Jbn-Car Favorites",
         JSON.stringify(favorites)
     );
 
@@ -631,7 +631,7 @@ function bookOnWhatsApp() {
 
     const message = `
 
-Bonjour DriveLux 👋
+Bonjour Jbn-Car  👋
 
 Je souhaite réserver une voiture.
 
@@ -933,7 +933,7 @@ function setupTheme() {
 
     const savedTheme =
         localStorage.getItem(
-            "driveluxTheme"
+            "Jbn-Car Theme"
         );
 
 
@@ -954,7 +954,7 @@ function setupTheme() {
 
 
             localStorage.setItem(
-                "driveluxTheme",
+                "Jbn-Car Theme",
                 document.body.classList.contains("light")
                     ? "light"
                     : "dark"
@@ -978,7 +978,7 @@ function setupWhatsApp() {
 
     floating.href =
         `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-            "Bonjour DriveLux 👋 Je souhaite avoir des informations sur la location de voitures."
+            "Bonjour Jbn-Car  👋 Je souhaite avoir des informations sur la location de voitures."
         )}`;
 
 }
